@@ -1,4 +1,4 @@
-export interface IFirm {
+export interface Firm {
     id: string;
     name: string;
     shortName: string;

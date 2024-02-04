@@ -9,10 +9,10 @@ export default defineConfig({
     includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.png'],
     manifest: {
       name: 'Praktikakohvik',
-      short_name: 'Praktikakohvik',
-      description: 'Praktikakohvik',
-      theme_color: '#000000',
-      background_color: '#ffffff',
+      short_name: 'PK',
+      description: 'Praktikakohvik is an internship fair aimed at TalTech students',
+      theme_color: '#1b0b64',
+      background_color: '#1b0b64',
       display: 'standalone',
       icons: [
         {

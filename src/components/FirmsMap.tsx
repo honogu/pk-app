@@ -3,16 +3,21 @@ import aulaFilled from '../assets/img/png/aula_filled.png';
 import aulaEmpty from '../assets/img/png/aula_empty.png';
 import hallEmpty from '../assets/img/png/hall_empty.png';
 import { useTranslation } from 'react-i18next';
-import { IFirm } from '../models/IFirm';
+import usePreload from '../helpers/usePreload';
 import styled from 'styled-components';
+import { Firm } from '../models/Firm';
 import { useEffect } from 'react';
 
-const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: IFirm, firms: IFirm[], clickFunction: (f: IFirm) => void }) => {
+const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: Firm, firms: Firm[], clickFunction: (f: Firm) => void }) => {
+    const { preloadImages } = usePreload()
     const { i18n } = useTranslation();
 
 	useEffect(() => {
-		preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ]);
-    }, []);
+        const loadImages = async () => {
+            await preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ]);
+        }
+        loadImages();
+    }, [preloadImages]);
 
     return (
 		<MapContainer>
@@ -53,16 +58,6 @@ const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: IFirm
 };
 
 export default FirmsMap;
-
-const images = []
-const preloadImages = async (sources: string[]) => {
-	const promises = sources.map(i => preloadImage(i))
-	await Promise.all(promises)
-}
-
-function preloadImage(src: string) {
-	images.push(new Image().src = src);
-}
 
 const MapContainer = styled.div`
     top: 30%;

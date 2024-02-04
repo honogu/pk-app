@@ -1,6 +1,6 @@
-import { IFirm } from './IFirm'
+import { Firm } from './Firm'
 
 export interface Response {
     displayMap: boolean;
-    firms: IFirm[];
+    firms: Firm[];
 }

@@ -1,46 +1,47 @@
 import FirmsInfoPlaceholder from './FirmsInfoPlaceholder'
-import { Response } from '../models/IGetFirmsResponse'
 import { baseAddress } from '../common/BaseAddress'
+import usePreload from '../helpers/usePreload'
 import { useTranslation } from 'react-i18next'
+import { Response } from '../models/Response'
+import useClient from '../helpers/useClient'
 import { useState, useEffect } from "react"
-import useFetch from '../helpers/useFetch'
-import { IFirm } from '../models/IFirm'
 import styled from 'styled-components'
+import { Firm } from '../models/Firm'
 import FirmsInfo from './FirmsInfo'
-import FirmsMap from './FirmsMap';
+import FirmsMap from './FirmsMap'
 
 const Firms = () => {
-    const [ selectedFirm, setSelectedFirm ] = useState<IFirm>();
-    const [ mapStatus, setMapStatus ] = useState(false);
-    const [ firms, setFirms ] = useState<IFirm[]>([]);
-    const [ clicked, setClicked ] = useState(false);
-    const [ loading, setLoading ] = useState(true);
-    const { t } = useTranslation();
+    const [ selectedFirm, setSelectedFirm ] = useState<Firm>()
+    const [ mapStatus, setMapStatus ] = useState(false)
+    const [ firms, setFirms ] = useState<Firm[]>([])
+    const [ clicked, setClicked ] = useState(false)
+    const [ loading, setLoading ] = useState(true)
+    const { preloadImages } = usePreload()
+    const { fetchClient } = useClient()
+    const { t } = useTranslation()
 
     useEffect(() => {
-        const LoadFirms = async () => {
+        const loadFirmsAndImages = async () => {
             try {
-                const data = await useFetch('firms');
-                const response: Response = data;
+                const response: Response = await fetchClient('firms')
+                const sources = response.firms.map(firm => baseAddress + 'firms/' + firm.id + '/image/1')
+                await preloadImages(sources)
                 setMapStatus(response.displayMap)
                 setFirms(response.firms)
-                const promises = response.firms.map(firm => PreloadImages(firm.id))
-                await Promise.all(promises)
             } catch {
                 setMapStatus(false)
                 setFirms([])
             }
             setLoading(false)
         }
+        loadFirmsAndImages()
+    }, [preloadImages, fetchClient])
 
-        LoadFirms()
-    }, []);
-
-    function click(firm: IFirm) {
+    function click(firm: Firm) {
 		setClicked(true)
 		if (selectedFirm == undefined || firm.id !== selectedFirm.id)
 		{
-			const filteredFirm = firms.filter((x) => x.id === firm.id)[0];
+			const filteredFirm = firms.filter((x) => x.id === firm.id)[0]
 			setSelectedFirm(filteredFirm)
 		}
     }
@@ -58,7 +59,7 @@ const Firms = () => {
                             <li id='f3'><button><h3>...</h3></button></li>
                         </ul>
                         : <ul>{
-                            firms.map((firm:IFirm) => (
+                            firms.map((firm:Firm) => (
                                 <li key={firm.name}>
                                     <button className={selectedFirm != undefined && firm.name === selectedFirm.name ? 'active' : ''} onClick={() => click(firm)}>
                                         <h3>{firm.name}</h3>
@@ -90,13 +91,6 @@ const Firms = () => {
 };
 
 export default Firms;
-
-const images = []
-async function PreloadImages(id:string) {
-	const img = new Image()
-    img.src = baseAddress + 'firms/' + id + '/image/1';
-	images.push(img)
-}
 
 const FirmsContainer = styled.div`
     width: 100%;
