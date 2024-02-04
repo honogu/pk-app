@@ -1,10 +1,10 @@
-import ITUKandTalTechLogo from '../assets/img/svg/ituktaltechlogo.svg';
-import locationLogo from '../assets/img/svg/geo-alt-fill.svg';
-import instagramLogo from '../assets/img/svg/instagram.svg';
-import facebookLogo from '../assets/img/svg/facebook.svg';
-import envelopeLogo from '../assets/img/svg/envelope.svg';
-import ITUKLogo from '../assets/img/svg/ituk.svg';
-import styled from 'styled-components';
+import ITUKandTalTechLogo from '../assets/img/svg/ituktaltechlogo.svg'
+import locationLogo from '../assets/img/svg/geo-alt-fill.svg'
+import instagramLogo from '../assets/img/svg/instagram.svg'
+import facebookLogo from '../assets/img/svg/facebook.svg'
+import envelopeLogo from '../assets/img/svg/envelope.svg'
+import ITUKLogo from '../assets/img/svg/ituk.svg'
+import styled from 'styled-components'
 
 const Footer = () => {
     return (

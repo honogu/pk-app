@@ -1,18 +1,18 @@
-import { animateCountdown } from './helpers/CountDown.tsx';
-import Questions from './components/Questions.tsx';
-import Gallery from './components/Gallery.tsx';
-import FBEvent from './components/FBEvent.tsx';
-import Header from './components/Header.tsx';
-import Navbar from './components/Navbar.tsx';
-import Footer from './components/Footer.tsx';
-import GlobalStyle from './GlobalStyle.tsx';
-import About from './components/About.tsx';
-import Firms from './components/Firms.tsx';
-import styled from 'styled-components';
-import { useEffect } from 'react';
+import { animateCountdown } from './helpers/CountDown.tsx'
+import Questions from './components/Questions.tsx'
+import Gallery from './components/Gallery.tsx'
+import FBEvent from './components/FBEvent.tsx'
+import Header from './components/Header.tsx'
+import Navbar from './components/Navbar.tsx'
+import Footer from './components/Footer.tsx'
+import GlobalStyle from './GlobalStyle.tsx'
+import About from './components/About.tsx'
+import Firms from './components/Firms.tsx'
+import styled from 'styled-components'
+import { useEffect } from 'react'
 
 function App() {
-  useEffect( () => { animateCountdown(); }, [] );
+  useEffect( () => { animateCountdown(); }, [] )
 
   return (
     <>

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 const Navbar = () => {
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation()
 
     return (
         <NavContainer>

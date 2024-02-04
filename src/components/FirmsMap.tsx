@@ -1,20 +1,20 @@
-import hallFilled from '../assets/img/png/hall_filled.png';
-import aulaFilled from '../assets/img/png/aula_filled.png';
-import aulaEmpty from '../assets/img/png/aula_empty.png';
-import hallEmpty from '../assets/img/png/hall_empty.png';
-import { useTranslation } from 'react-i18next';
-import usePreload from '../helpers/usePreload';
-import styled from 'styled-components';
-import { Firm } from '../models/Firm';
-import { useEffect } from 'react';
+import hallFilled from '../assets/img/png/hall_filled.png'
+import aulaFilled from '../assets/img/png/aula_filled.png'
+import aulaEmpty from '../assets/img/png/aula_empty.png'
+import hallEmpty from '../assets/img/png/hall_empty.png'
+import { useTranslation } from 'react-i18next'
+import usePreload from '../helpers/usePreload'
+import styled from 'styled-components'
+import { Firm } from '../models/Firm'
+import { useEffect } from 'react'
 
 const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: Firm, firms: Firm[], clickFunction: (f: Firm) => void }) => {
     const { preloadImages } = usePreload()
-    const { i18n } = useTranslation();
+    const { i18n } = useTranslation()
 
 	useEffect(() => {
         const loadImages = async () => {
-            await preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ]);
+            await preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ])
         }
         loadImages();
     }, [preloadImages]);

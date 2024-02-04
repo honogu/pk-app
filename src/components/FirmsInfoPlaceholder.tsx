@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 const FirmsInfoPlaceholder = ({ isLoading, firmsCount, mapStatus } : { isLoading:boolean, firmsCount:number, mapStatus: boolean }) => {
-    const { t } = useTranslation();
-    const [ loadingText, setLoadingText ] = useState('');
-    const [ totalIntervalTime, setTotalIntervalTime] = useState(0);
+    const [ totalIntervalTime, setTotalIntervalTime] = useState(0)
+    const [ loadingText, setLoadingText ] = useState('')
+    const { t } = useTranslation()
 
     useEffect(() => {
 		const interval = setInterval(function() {

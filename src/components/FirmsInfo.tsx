@@ -1,13 +1,13 @@
 import placeholder from '../assets/img/png/placeholder.png'
-import { baseAddress } from '../common/BaseAddress';
+import { baseAddress } from '../common/BaseAddress'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import { Firm } from '../models/Firm'
-import { useState } from "react";
+import { useState } from 'react'
 
 const FirmsInfo = (firm: Firm) => {
-    const [ imageLoading, setImageLoading] = useState(true);
-    const { t, i18n } = useTranslation();
+    const [ imageLoading, setImageLoading] = useState(true)
+    const { t, i18n } = useTranslation()
 
     return (
 		<InfoContainer>
