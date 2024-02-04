@@ -12,7 +12,7 @@ import styled from 'styled-components'
 import { useEffect } from 'react'
 
 function App() {
-  useEffect( () => { animateCountdown(); }, [] )
+  useEffect( () => { animateCountdown() }, [] )
 
   return (
     <>
