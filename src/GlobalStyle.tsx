@@ -24,7 +24,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        background: #1b0b64;
+        background: rgb(255,158,56);
+        background: linear-gradient(0deg, rgba(255,158,56,1) 10%, rgba(255,103,118,1) 100%);
     }
 
     h1, h2, h3, p, li {

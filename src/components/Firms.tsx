@@ -1,10 +1,10 @@
 import FirmsInfoPlaceholder from './FirmsInfoPlaceholder'
-import { baseAddress } from '../common/BaseAddress'
+import { baseAddress } from '../helpers/BaseAddress'
 import usePreload from '../helpers/usePreload'
 import { useTranslation } from 'react-i18next'
 import { Response } from '../models/Response'
-import useClient from '../helpers/useClient'
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
+import useAPI from '../helpers/useAPI'
 import styled from 'styled-components'
 import { Firm } from '../models/Firm'
 import FirmsInfo from './FirmsInfo'
@@ -17,15 +17,15 @@ const Firms = () => {
     const [ clicked, setClicked ] = useState(false)
     const [ loading, setLoading ] = useState(true)
     const { preloadImages } = usePreload()
-    const { fetchClient } = useClient()
+    const { getMethod } = useAPI()
     const { t } = useTranslation()
 
     useEffect(() => {
         const loadFirmsAndImages = async () => {
             try {
-                const response: Response = await fetchClient('firms')
+                const response: Response = await getMethod('firms')
                 const sources = response.firms.map(firm => baseAddress + 'firms/' + firm.id + '/image/1')
-                await preloadImages(sources)
+                preloadImages(sources)
                 setMapStatus(response.displayMap)
                 setFirms(response.firms)
             } catch {
@@ -35,7 +35,7 @@ const Firms = () => {
             setLoading(false)
         }
         loadFirmsAndImages()
-    }, [preloadImages, fetchClient])
+    }, [preloadImages, getMethod])
 
     function click(firm: Firm) {
 		setClicked(true)
@@ -104,7 +104,7 @@ const FirmsContainer = styled.div`
     }
 
     .firms-list li:hover{
-        background-color: #FF0063;
+        background-color: #ff6776;
         transition: 0.2s;
     }
 
@@ -117,14 +117,14 @@ const FirmsContainer = styled.div`
     }
 
     .firms-list .active{
-        background-color: #FF0063;
+        background-color: #ff6776;
     }
 
     .firms-list h3 {
         text-align: left;
         font-size: 17px;
         font-weight: 200;
-        border-bottom: 1px solid #FF0063;
+        border-bottom: 1px solid #ff6776;
     }
 
     .firms-list h2{

@@ -1,5 +1,5 @@
 import placeholder from '../assets/img/png/placeholder.png'
-import { baseAddress } from '../common/BaseAddress'
+import { baseAddress } from '../helpers/BaseAddress'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import { Firm } from '../models/Firm'

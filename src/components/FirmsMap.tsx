@@ -13,10 +13,7 @@ const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: Firm,
     const { i18n } = useTranslation()
 
 	useEffect(() => {
-        const loadImages = async () => {
-            await preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ])
-        }
-        loadImages();
+        preloadImages([ aulaEmpty, aulaFilled, hallEmpty, hallFilled ])
     }, [preloadImages]);
 
     return (

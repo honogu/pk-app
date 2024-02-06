@@ -74,7 +74,8 @@ const AppContainer = styled.div`
 
   .text-bg {
     position: absolute;
-    background-color: #2a28a3;
+    background: rgb(255,158,56);
+    background: linear-gradient(270deg, rgba(255,158,56,1) 10%, rgba(255,103,118,1) 100%);
     top: 0;
     height: 100%;
     width: 100vw;

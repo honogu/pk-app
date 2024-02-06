@@ -1,7 +1,7 @@
-import { baseAddress } from "../common/BaseAddress";
+import { baseAddress } from "./BaseAddress";
 
-export default function useClient() {
-    const fetchClient = async (endpoint: string) => {
+export default function useAPI() {
+    const getMethod = async (endpoint: string) => {
         try {
             const response = await fetch(baseAddress + endpoint, {
                 headers: {
@@ -19,5 +19,5 @@ export default function useClient() {
         }
     }
 
-    return { fetchClient }
+    return { getMethod }
 }

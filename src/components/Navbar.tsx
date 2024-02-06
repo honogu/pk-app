@@ -56,7 +56,8 @@ const NavContainer = styled.div`
         top: -65px;
         padding: 0 50px 0 50px;
         box-sizing: border-box;
-        background-color: #FF0063;
+        background: rgb(255,158,56);
+        background: linear-gradient(90deg, rgba(255,158,56,1) 10%, rgba(255,103,118,1) 100%);
         position: fixed;
         z-index: 100;
         transition: top 0.5s;

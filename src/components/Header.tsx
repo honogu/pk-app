@@ -63,8 +63,8 @@ const HeaderContainer = styled.div`
         height: 100%;
         width: 100%;
         z-index: 1;
-        background: rgb(27,11,100);
-        background: linear-gradient(0deg, rgba(27,11,100,1) 3%, rgba(27,11,100,0.7682423311121324) 100%);
+        background: rgb(255,158,56);
+        background: linear-gradient(0deg, rgba(255,158,56,1) 10%, rgba(255,103,118,0.8155637254901961) 100%);
     }
 
     header {
