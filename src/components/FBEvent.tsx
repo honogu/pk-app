@@ -63,8 +63,8 @@ const EventContainer = styled.div`
     }
 
     a img:hover {
-        border-color: #2f169e;
-        box-shadow: #2f169e 0px 8px 24px;
+        border-color: #ff6776;
+        box-shadow: #ff6776 0px 8px 24px;
     }
 
     @media all and (max-width: 700px){

@@ -1,7 +1,7 @@
-import hallFilled from '../assets/img/png/hall_filled.png'
-import aulaFilled from '../assets/img/png/aula_filled.png'
-import aulaEmpty from '../assets/img/png/aula_empty.png'
-import hallEmpty from '../assets/img/png/hall_empty.png'
+import hallFilled from '../assets/img/svg/hall_filled.svg'
+import aulaFilled from '../assets/img/svg/aula_filled.svg'
+import aulaEmpty from '../assets/img/svg/aula_empty.svg'
+import hallEmpty from '../assets/img/svg/hall_empty.svg'
 import { useTranslation } from 'react-i18next'
 import usePreload from '../helpers/usePreload'
 import styled from 'styled-components'
@@ -62,7 +62,11 @@ const MapContainer = styled.div`
 
     img {
         position: absolute;
-        width: 100%;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
         height: auto;
     }
 
@@ -99,23 +103,23 @@ const MapContainer = styled.div`
         flex: 1;
         justify-content: center;
         align-items: center;
-        border: 2px solid #FF0063;
+        border: 2px solid #ff6776;
         color: white;
         font-size: 0.7vw;
         border-radius: 4px;
-        background-color: #FF0063;
+        background-color: #ff6776;
         overflow: hidden;
     }
 
     .container-map button:hover {
         background-color: white;
-        color: #FF0063;
+        color: #ff9e38;
         transition: 0.2s;
     }
 
     .container-map .active {
         background-color: white;
-        color: #FF0063;
+        color: #ff6776;
         transition: 0.2s;
     }
 
@@ -131,7 +135,7 @@ const MapContainer = styled.div`
         }
         
         .container-map button {
-            border: 1px solid #FF0063;
+            border: 1px solid #ff6776;
         }
     }
 `

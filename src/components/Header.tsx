@@ -64,7 +64,7 @@ const HeaderContainer = styled.div`
         width: 100%;
         z-index: 1;
         background: rgb(255,158,56);
-        background: linear-gradient(0deg, rgba(255,158,56,1) 10%, rgba(255,103,118,0.8155637254901961) 100%);
+        background: linear-gradient(0deg, rgba(255,158,56,1) 10%, rgba(255,103,118,0.633578431372549) 100%);
     }
 
     header {
@@ -110,30 +110,6 @@ const HeaderContainer = styled.div`
         padding-top: 25px;
         font-size: 45px;
         letter-spacing: normal;
-    }
-
-    .countdown .dayNr {
-        color: #FF0063;
-    }
-
-    .countdown .container-day {
-        border-bottom-color: #FF0063;
-    }
-
-    .countdown .hourNr{
-        color: #fc3b85;
-    }
-
-    .countdown .container-hour {
-        border-bottom-color: #fc3b85;
-    }
-
-    .countdown .minuteNr{
-        color: #ff97bf;
-    }
-
-    .countdown .container-minute {
-        border-bottom-color: #ff97bf;
     }
 
     @media all and (max-width: 700px){
