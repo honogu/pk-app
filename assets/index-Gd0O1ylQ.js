@@ -549,7 +549,7 @@ Error generating stack: `+o.message+`
             column-count: 1;
         }
     }
-`,$0=({isLoading:e,firmsCount:t,mapStatus:n})=>{const[r,i]=M.useState(0),[o,s]=M.useState(""),{t:l}=xt();return M.useEffect(()=>{const a=setInterval(function(){e?(s(()=>o===" . . ."?"":o+" ."),i(u=>u+=500)):(s(""),i(0))},500);return()=>clearInterval(a)},[e,o]),x.jsxs(z0,{children:[x.jsx("p",{children:e?l("firmList.Loading")+o:l(t===0?"firmList.Undefined":n?"firmList.GuideMap":"firmList.Guide")}),x.jsx("h3",{children:r>=15e3?l("firmList.Apology"):""})]})},z0=Ie.section`
+`,$0=({isLoading:e,firmsCount:t,mapStatus:n})=>{const[r,i]=M.useState(0),[o,s]=M.useState(""),{t:l}=xt();return M.useEffect(()=>{const a=setInterval(function(){e?(s(()=>o===" . . ."?"":o+" ."),i(u=>u+=500)):(s(""),i(0))},500);return()=>clearInterval(a)}),x.jsxs(z0,{children:[x.jsx("p",{children:e?l("firmList.Loading")+o:l(t===0?"firmList.Undefined":n?"firmList.GuideMap":"firmList.Guide")}),x.jsx("h3",{children:r>=15e3?l("firmList.Apology"):""})]})},z0=Ie.section`
     border: 2px dashed #FFFFFF;
     height: 150px;
     display: flex;
@@ -574,6 +574,8 @@ Error generating stack: `+o.message+`
 
 
     @media all and (max-width: 700px) {
+        position: relative;
+
         margin-top: 0;
 
         p {
@@ -721,6 +723,8 @@ Error generating stack: `+o.message+`
     }
 
     @media all and (max-width: 700px) {
+        position: relative;
+        
         .container-map button {
             font-size: 2vw;
             font-weight: 600;
@@ -730,7 +734,7 @@ Error generating stack: `+o.message+`
             border: 1px solid #ff6776;
         }
     }
-`,B0=()=>{const[e,t]=M.useState(),[n,r]=M.useState(!1),[i,o]=M.useState([]),[s,l]=M.useState(!1),[a,u]=M.useState(!0),{preloadImages:d}=sp(),{getMethod:p}=D0(),{t:c}=xt();M.useEffect(()=>{(async()=>{try{const w=await p("firms"),L=w.firms.map(h=>Na+"firms/"+h.id+"/image/1");d(L),r(w.displayMap),o(w.firms)}catch{r(!1),o([])}u(!1)})()},[d,p]);function y(m){if(l(!0),e==null||m.id!==e.id){const w=i.filter(L=>L.id===m.id)[0];t(w)}}return x.jsx(H0,{children:x.jsxs("div",{className:"container-grid",children:[x.jsx("h2",{id:"firms-title",children:c("firms.firmsTitle")}),x.jsx("section",{className:"firms-list",children:i.length==0?x.jsxs("ul",{children:[x.jsx("li",{children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})}),x.jsx("li",{id:"f2",children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})}),x.jsx("li",{id:"f3",children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})})]}):x.jsx("ul",{children:i.map(m=>x.jsx("li",{children:x.jsx("button",{className:e!=null&&m.name===e.name?"active":"",onClick:()=>y(m),children:x.jsx("h3",{children:m.name})})},m.name))})}),x.jsx("section",{className:"firms-map",children:n?x.jsx(ec,{selectedFirm:e,firms:i,clickFunction:y}):x.jsx(ec,{selectedFirm:e,firms:[],clickFunction:y})}),x.jsx("section",{className:"firms-info",children:s?x.jsx(M0,{...e}):x.jsx($0,{isLoading:a,firmsCount:i.length,mapStatus:n})})]})})},H0=Ie.div`
+`,B0=()=>{const[e,t]=M.useState(),[n,r]=M.useState(!1),[i,o]=M.useState([]),[s,l]=M.useState(!1),[a,u]=M.useState(!0),{preloadImages:d}=sp(),{getMethod:p}=D0(),{t:c}=xt();M.useEffect(()=>{(async()=>{try{const w=await p("firms"),L=w.firms.map(h=>Na+"firms/"+h.id+"/image/1");d(L),r(w.displayMap),o(w.firms)}catch{r(!1),o([])}u(!1)})()},[]);function y(m){if(l(!0),e==null||m.id!==e.id){const w=i.filter(L=>L.id===m.id)[0];t(w)}}return x.jsx(H0,{children:x.jsxs("div",{className:"container-grid",children:[x.jsx("h2",{id:"firms-title",children:c("firms.firmsTitle")}),x.jsx("section",{className:"firms-list",children:i.length==0?x.jsxs("ul",{children:[x.jsx("li",{children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})}),x.jsx("li",{id:"f2",children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})}),x.jsx("li",{id:"f3",children:x.jsx("button",{children:x.jsx("h3",{children:"..."})})})]}):x.jsx("ul",{children:i.map(m=>x.jsx("li",{children:x.jsx("button",{className:e!=null&&m.name===e.name?"active":"",onClick:()=>y(m),children:x.jsx("h3",{children:m.name})})},m.name))})}),x.jsx("section",{className:"firms-map",children:n?x.jsx(ec,{selectedFirm:e,firms:i,clickFunction:y}):x.jsx(ec,{selectedFirm:e,firms:[],clickFunction:y})}),x.jsx("section",{className:"firms-info",children:s?x.jsx(M0,{...e}):x.jsx($0,{isLoading:a,firmsCount:i.length,mapStatus:n})})]})})},H0=Ie.div`
     width: 100%;
     margin: 60px 0;
     padding: 0 50px;
