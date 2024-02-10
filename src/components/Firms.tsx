@@ -35,7 +35,7 @@ const Firms = () => {
             setLoading(false)
         }
         loadFirmsAndImages()
-    }, [preloadImages, getMethod])
+    }, [])
 
     function click(firm: Firm) {
 		setClicked(true)

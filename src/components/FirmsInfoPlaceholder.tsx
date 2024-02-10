@@ -21,7 +21,7 @@ const FirmsInfoPlaceholder = ({ isLoading, firmsCount, mapStatus } : { isLoading
 			}
 		}, 500);
 		return () => clearInterval(interval)
-    }, [isLoading, loadingText]);
+    });
 
     return (
 		<PlaceholderContainer>
@@ -66,6 +66,8 @@ const PlaceholderContainer = styled.section`
 
 
     @media all and (max-width: 700px) {
+        position: relative;
+
         margin-top: 0;
 
         p {

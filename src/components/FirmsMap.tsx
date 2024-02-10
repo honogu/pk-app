@@ -129,6 +129,8 @@ const MapContainer = styled.div`
     }
 
     @media all and (max-width: 700px) {
+        position: relative;
+        
         .container-map button {
             font-size: 2vw;
             font-weight: 600;
