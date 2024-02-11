@@ -129,6 +129,7 @@ const MapContainer = styled.div`
     }
 
     @media all and (max-width: 700px) {
+        top: 0;
         position: relative;
         
         .container-map button {

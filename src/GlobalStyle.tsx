@@ -33,10 +33,6 @@ const GlobalStyle = createGlobalStyle`
         color: white;
     }
 
-    a{
-        padding-left: 10px;
-    }
-
     h1 {
         font: 1000 100px/90% GilroyEB;
     }

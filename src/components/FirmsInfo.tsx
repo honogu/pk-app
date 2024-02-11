@@ -84,10 +84,6 @@ const InfoContainer = styled.div`
         height: auto;
     }
 
-    @media all and (max-width: 983px) {
-        margin-left: 15px;
-    }
-
     @media all and (max-width: 700px) {
         h2 {
             text-align: left;
@@ -99,7 +95,7 @@ const InfoContainer = styled.div`
         }
 
         .image-container {
-            width: 80%;
+            width: auto !important;
             max-width: 200px;
             aspect-ratio: 3.5 / 1;
         }

@@ -67,8 +67,9 @@ const PlaceholderContainer = styled.section`
 
     @media all and (max-width: 700px) {
         position: relative;
-
+        top: 5%;
         margin-top: 0;
+        margin-bottom: 0;
 
         p {
             padding: 0;
