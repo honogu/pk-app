@@ -23,11 +23,10 @@
         "questionContent": "Here are some examples of questions to ask employers:",
         "question1": "What skills are required to apply for a position?",
         "question2": "What technologies are used in the company?",
-        "question3": "What to expect in terms of salary?",
-        "question4": "What does the daily work of the office look like?",
-        "question5": "What is the workload?",
-        "question6": "How flexible is the schedule or workload when working as a student?",
-        "question7": "What are the self-development opportunities in the company? Are there any additional trainings offered?"
+        "question3": "What does the daily work of the office look like?",
+        "question4": "What is the workload?",
+        "question5": "How flexible is the schedule or workload when working as a student?",
+        "question6": "What are the self-development opportunities in the company? Are there any additional trainings offered?"
     },
     "FBlink":{
         "title": "FACEBOOK EVENT"

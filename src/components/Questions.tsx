@@ -17,7 +17,6 @@ const Questions = () => {
                     <li>{t('questions.question4')}</li>
                     <li>{t('questions.question5')}</li>
                     <li>{t('questions.question6')}</li>
-                    <li>{t('questions.question7')}</li>
                 </ul>
             </div>
             <div className='image'>
