@@ -7,7 +7,7 @@ const Questions = () => {
 
     return (
         <QuestionsContainer>
-            <div className='container-questions text'>
+            <div className='text'>
                 <h2>{t('questions.questionTitle')}</h2>
                 <p>{t('questions.questionContent')}</p>
                 <ul>
@@ -20,8 +20,8 @@ const Questions = () => {
                     <li>{t('questions.question7')}</li>
                 </ul>
             </div>
-            <div className='container-questions image'>
-                <img src={praktikakohvik2022} alt='Praktikakohvik 2022'/>
+            <div className='image'>
+                <img src={ praktikakohvik2022 } alt='Praktikakohvik 2022'/>
             </div>
         </QuestionsContainer>
     )

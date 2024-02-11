@@ -27,7 +27,7 @@ const FirmsMap = ({ selectedFirm, firms, clickFunction } : { selectedFirm: Firm,
 						? (i18n.language === 'et' ? aulaEmpty : hallEmpty)
 						: (i18n.language === 'et' ? aulaFilled : hallFilled)
 				} 
-				alt="Aula"
+				alt='Aula kaart'
 			/>
 			<div className='aspect-ratio-box'>
 				<div className='container-map'>

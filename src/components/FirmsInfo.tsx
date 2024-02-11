@@ -14,12 +14,12 @@ const FirmsInfo = (firm: Firm) => {
 			<div className={ imageLoading ? 'image-container loading' : 'image-container' }>
 				<img 
 					style={ imageLoading ? { display: 'block' } : { display: 'none' } } 
-					src={placeholder} alt="firmsLogo"/>
+					src={ placeholder } alt='Firms logo'/>
 				<img
-					src={baseAddress + 'firms/' + firm.id + '/image/1'}
+					src={ baseAddress + 'firms/' + firm.id + '/image/1' }
 					style={ imageLoading ? { display: 'none' } : { display: 'block' } }
-					onLoad={() => setImageLoading(false) }
-					alt="firmsLogo"
+					onLoad={ () => setImageLoading(false) }
+					alt='Firms logo'
 				/>
 			</div>
 			<p className='firms-text'>

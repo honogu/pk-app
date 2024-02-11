@@ -11,8 +11,8 @@ export default defineConfig({
       name: 'Praktikakohvik',
       short_name: 'PK',
       description: 'Praktikakohvik is an internship fair aimed at TalTech students',
-      theme_color: '#1b0b64',
-      background_color: '#1b0b64',
+      theme_color: '#ff6776',
+      background_color: '#ff6776',
       display: 'standalone',
       icons: [
         {

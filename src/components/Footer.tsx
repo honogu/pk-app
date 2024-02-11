@@ -10,21 +10,21 @@ const Footer = () => {
     return (
         <FooterrContainer>
 			<section>
-				<img src={ITUKandTalTechLogo} alt="Footer Logo" id="logo"/>
-				<div id="contact">
-					<img src={envelopeLogo} alt="envelope" id="envelope"/>
-					<img src={locationLogo} alt="location" id="location"/>
-					<h3 id="meil">kontakt@ituk.ee</h3>
-					<h3 id="loc">Akadeemia tee 15a,<br/>ICT-361</h3>
+				<img src={ ITUKandTalTechLogo } alt='ITÜK Logo' id='logo'/>
+				<div id='contact'>
+					<img src={ envelopeLogo } alt='email'/>
+					<img src={ locationLogo } alt='location' id='location'/>
+					<h3 id='meil'>kontakt@ituk.ee</h3>
+					<h3 id='loc'>Akadeemia tee 15a,<br/>ICT-361</h3>
 				</div>
-				<div id="links">
-					<a href="https://www.facebook.com/ituk.taltech/" rel="noreferrer" target="_blank"><img src={facebookLogo} alt="ITÜK Facebook"/></a>
-					<a href="https://www.instagram.com/ituk.taltech/?hl=en" rel="noreferrer" target="_blank"><img src={instagramLogo} alt="ITÜK Instagram"/></a>
-					<a href="https://ituk.ee/" rel="noreferrer" target="_blank"><img src={ITUKLogo} alt="ITÜK Veebileht"/></a>
+				<div id='links'>
+					<a href='https://www.facebook.com/ituk.taltech/' rel='noreferrer' target='_blank'><img src={ facebookLogo } alt='ITÜK Facebook'/></a>
+					<a href='https://www.instagram.com/ituk.taltech/?hl=en' rel='noreferrer' target='_blan'><img src={instagramLogo} alt='ITÜK Instagram'/></a>
+					<a href='https://ituk.ee/' rel="noreferrer" target='_blank'><img src={ITUKLogo} alt='ITÜK Veebileht'/></a>
 				</div>
 			</section>
 			<hr/>  
-			<h3 id="footer">© 2024 ITÜK. All rights reserved.</h3>
+			<h3 id='copyright'>© { new Date().getFullYear() } ITÜK. All rights reserved.</h3>
 		</FooterrContainer>
     )
 };
@@ -77,7 +77,7 @@ const FooterrContainer = styled.footer`
         background-color:white;
     }
 
-    #footer {
+    #copyright {
         padding-top: 25px;
         padding-bottom: 25px;
         text-align: center;

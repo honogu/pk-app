@@ -9,11 +9,11 @@ const FBEvent = () => {
     return (
         <EventContainer>
             <div className='title'>
-                <img className='logo' src={facebookLogo} alt="ITÜK Facebook"/>
+                <img className='logo' src={ facebookLogo } alt='Facebook logo'/>
                 <h2>{t('FBlink.title')}</h2>
             </div>
-            <a href="https://fb.me/e/2kBO1xmGZ" rel="noreferrer" target="_blank">
-                <img src={FBEventImage} alt='FB link'></img>
+            <a href='https://fb.me/e/2kBO1xmGZ' rel='noreferrer' target='_blank'>
+                <img src={ FBEventImage } alt='Facebook event link'></img>
             </a>
         </EventContainer>
     )
