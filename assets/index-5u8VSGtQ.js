@@ -507,10 +507,6 @@ Error generating stack: `+o.message+`
         color: white;
     }
 
-    a{
-        padding-left: 10px;
-    }
-
     h1 {
         font: 1000 100px/90% GilroyEB;
     }
@@ -576,8 +572,9 @@ Error generating stack: `+o.message+`
 
     @media all and (max-width: 700px) {
         position: relative;
-
+        top: 5%;
         margin-top: 0;
+        margin-bottom: 0;
 
         p {
             padding: 0;
@@ -631,10 +628,6 @@ Error generating stack: `+o.message+`
         height: auto;
     }
 
-    @media all and (max-width: 983px) {
-        margin-left: 15px;
-    }
-
     @media all and (max-width: 700px) {
         h2 {
             text-align: left;
@@ -646,7 +639,7 @@ Error generating stack: `+o.message+`
         }
 
         .image-container {
-            width: 80%;
+            width: auto !important;
             max-width: 200px;
             aspect-ratio: 3.5 / 1;
         }
@@ -724,6 +717,7 @@ Error generating stack: `+o.message+`
     }
 
     @media all and (max-width: 700px) {
+        top: 0;
         position: relative;
         
         .container-map button {
