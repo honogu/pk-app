@@ -116,7 +116,7 @@ Error generating stack: `+o.message+`
             height: 200px;
         }
     }
-`,op="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='30'%20height='30'%20viewBox='0%200%2030%2030'%3e%3cpath%20d='M15,0A15,15,0,1,0,30,15,15,15,0,0,0,15,0Zm5.723,7.639H18.648c-1.627,0-1.941.773-1.941,1.907v2.5h3.88l0,3.918H16.707V26.02H12.66V15.966H9.277V12.048H12.66V9.159c0-3.353,2.049-5.179,5.039-5.179l3.023,0V7.639Z'%20fill='%23ffffff'/%3e%3c/svg%3e",d0="/pk-app/assets/FBEvent-7ZXeBEWE.png",p0=()=>{const{t:e}=xt();return x.jsxs(h0,{children:[x.jsxs("div",{className:"title",children:[x.jsx("img",{className:"logo",src:op,alt:"Facebook logo"}),x.jsx("h2",{children:e("FBlink.title")})]}),x.jsx("a",{href:"https://fb.me/e/2kBO1xmGZ",rel:"noreferrer",target:"_blank",children:x.jsx("img",{src:d0,alt:"Facebook event link"})})]})},h0=Ie.div`
+`,op="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='30'%20height='30'%20viewBox='0%200%2030%2030'%3e%3cpath%20d='M15,0A15,15,0,1,0,30,15,15,15,0,0,0,15,0Zm5.723,7.639H18.648c-1.627,0-1.941.773-1.941,1.907v2.5h3.88l0,3.918H16.707V26.02H12.66V15.966H9.277V12.048H12.66V9.159c0-3.353,2.049-5.179,5.039-5.179l3.023,0V7.639Z'%20fill='%23ffffff'/%3e%3c/svg%3e",d0="/pk-app/assets/FBEvent-O31hZD7Q.png",p0=()=>{const{t:e}=xt();return x.jsxs(h0,{children:[x.jsxs("div",{className:"title",children:[x.jsx("img",{className:"logo",src:op,alt:"Facebook logo"}),x.jsx("h2",{children:e("FBlink.title")})]}),x.jsx("a",{href:"https://fb.me/e/2kBO1xmGZ",rel:"noreferrer",target:"_blank",children:x.jsx("img",{src:d0,alt:"Facebook event link"})})]})},h0=Ie.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -459,7 +459,8 @@ Error generating stack: `+o.message+`
     }
 
     #links a:hover {
-        border-color: white;
+        border-color: #ff6776;
+        box-shadow: #ff6776 0 0 15px;
     }
 
     @media all and (max-width: 700px) {
