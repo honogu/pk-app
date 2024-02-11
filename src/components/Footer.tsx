@@ -100,7 +100,8 @@ const FooterrContainer = styled.footer`
     }
 
     #links a:hover {
-        border-color: white;
+        border-color: #ff6776;
+        box-shadow: #ff6776 0 0 15px;
     }
 
     @media all and (max-width: 700px) {
