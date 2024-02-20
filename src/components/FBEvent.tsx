@@ -12,7 +12,7 @@ const FBEvent = () => {
                 <img className='logo' src={ facebookLogo } alt='Facebook logo'/>
                 <h2>{t('FBlink.title')}</h2>
             </div>
-            <a href='https://fb.me/e/2kBO1xmGZ' rel='noreferrer' target='_blank'>
+            <a href='https://fb.me/e/205JLCuhO' rel='noreferrer' target='_blank'>
                 <img src={ FBEventImage } alt='Facebook event link'></img>
             </a>
         </EventContainer>

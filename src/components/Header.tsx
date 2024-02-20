@@ -1,3 +1,4 @@
+import logo from '../assets/img/svg/pk_logo.svg'
 import BG from '../assets/img/png/PK2023_0.jpg'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
@@ -9,10 +10,10 @@ const Header = () => {
         <HeaderContainer>
             <div className='header-bg'>
                 <div id='img-filter'></div>
-                <img src={BG} alt="Event" />
+                <img src={ BG } alt='Event' />
             </div>
             <header>
-                <h1 id='header-title'>PRAKTIKA-<br/>KOHVIK</h1>
+                <img src={ logo } alt='PK Logo' id='pk-logo' />
                 <h3 id='header-date'>{t('header.date')}</h3>
                 
                 <section className='countdown'>
@@ -54,11 +55,20 @@ const HeaderContainer = styled.div`
         align-items: center;
         justify-content: center;
     }
+
     .header-bg img {
         position: absolute;
         min-width: 100%;
         min-height: 100%;
     }
+
+    #pk-logo {
+        position: relative;
+        left: -30px;
+        width: 620px;
+        height: auto;
+    }
+
     #img-filter {
         height: 100%;
         width: 100%;
@@ -112,12 +122,16 @@ const HeaderContainer = styled.div`
         letter-spacing: normal;
     }
 
+    @media all and (max-width: 900px){
+        #pk-logo {
+            left: 10px;
+        }
+    }
+
     @media all and (max-width: 700px){
-        #praktikakohvik_logo{
+        #pk-logo {
+            left: 0;
             width: 300px;
-            height: auto;
-            right: 15px;
-            top: 35px;
         }
 
         #header-title {
